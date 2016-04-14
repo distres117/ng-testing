@@ -19,6 +19,7 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'app/*.js',
       'specs/*.js',
+      'app/views/*.html'
     ],
 
 
@@ -30,6 +31,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/views/*.html' : ['ng-html2js']
+    },
+    ngHtml2JsPreprocessor:{
+
+      stripPrefix: 'app/',
+      moduleName: 'app.views'
     },
 
 
