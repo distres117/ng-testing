@@ -1,3 +1,5 @@
-<div ng-class="{active: key[num]}" ng-repeat="num in nums">
-  <span>{{num}}</span>
-</div>
+<div>
+  <div ng-class="{disabled: !key[num]}" ui-sref="link({idx: num})" ng-repeat="num in nums">
+      <span>{{num}}</span>
+  </div>
+  </div>
